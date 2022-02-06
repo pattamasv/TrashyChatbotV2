@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <style>
+        table {
+            border-collapse:collapse;
+        }
+        table , th , td{
+            border-bottom: 2px solid black;
+            padding: 15px;
+        }
+        </style>
+</head>
+
+<body>
+    <div align = "center">
+        <h1><b>Trashy Dashboard</b></h1>
+
+        <table>
+            <tbody>
+                <tr>
+                    <th>DisplayName</th>
+                    <th>Trash</th>
+                    <th>Time</th>
+                </tr>
+                <tr>
+                    {% for user in users %}
+                </tr>
+                    <td>{{user.displayname}}</td>
+                    <td>{{user.trash}}</td>
+                    <td>{{user.timestamp}}</td>
+                <tr>
+                    {% endfor %}
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
